@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="11dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="311dp"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="Biodata"
+                android:textSize="28sp"/>
+        </TableRow>
+
+    </TableLayout>
+    <TableLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView android:text="Id"
+                android:layout_weight="1"/>
+            <EditText android:id="@+id/dialogId"
+                android:enabled="false"
+                android:layout_weight="6"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Nama"
+                android:layout_weight="1"/>
+            <EditText android:id="@+id/dialogNama"
+                android:layout_weight="6"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Usia"
+                android:layout_weight="1"/>
+            <EditText android:id="@+id/dialogUsia"
+                android:layout_weight="6"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Domisili"
+                android:layout_weight="1"/>
+            <EditText android:id="@+id/dialogDomisili"
+                android:layout_weight="6"
+                />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:gravity="end">
+            <Button android:text="Edit"
+                android:id="@+id/btnEdit"/>
+            <Button android:text="Delete"
+                android:id="@+id/btnDelete"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

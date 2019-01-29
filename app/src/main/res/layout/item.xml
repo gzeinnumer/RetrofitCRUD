@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    android:id="@+id/cardView"
+    android:layout_margin="11dp"
+    app:cardCornerRadius="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_marginBottom="31dp"
+    android:layout_marginTop="31dp"
+    android:padding="11dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView android:id="@+id/tampilId" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilNama" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilUsia" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilDomisili" android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>
