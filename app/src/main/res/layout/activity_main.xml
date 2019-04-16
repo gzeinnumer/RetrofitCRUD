@@ -17,16 +17,30 @@
         android:layout_marginBottom="11dp"/>
 
     <EditText
-        android:id="@+id/edt_usia"
+        android:id="@+id/edt_nim"
         android:inputType="number"
-        android:hint="Usia"
+        android:hint="Nim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"/>
 
     <EditText
-        android:id="@+id/edt_domisili"
-        android:hint="Domisili"
+        android:id="@+id/edt_jurusan"
+        android:hint="Jurusan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"/>
+
+    <EditText
+        android:id="@+id/edt_prodi"
+        android:hint="Prodi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"/>
+
+    <EditText
+        android:id="@+id/edt_alamat"
+        android:hint="Alamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"/>

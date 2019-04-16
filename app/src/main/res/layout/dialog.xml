@@ -39,17 +39,33 @@
         </TableRow>
 
         <TableRow>
-            <TextView android:text="Usia"
+            <TextView android:text="Nim"
                 android:layout_weight="1"/>
-            <EditText android:id="@+id/dialogUsia"
+            <EditText android:id="@+id/dialogNim"
                 android:layout_weight="6"
                 />
         </TableRow>
 
         <TableRow>
-            <TextView android:text="Domisili"
+            <TextView android:text="Jurusan"
                 android:layout_weight="1"/>
-            <EditText android:id="@+id/dialogDomisili"
+            <EditText android:id="@+id/dialogJurusan"
+                android:layout_weight="6"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Prodi"
+                android:layout_weight="1"/>
+            <EditText android:id="@+id/dialogProdi"
+                android:layout_weight="6"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Alamat"
+                android:layout_weight="1"/>
+            <EditText android:id="@+id/dialogAlamat"
                 android:layout_weight="6"
                 />
         </TableRow>

@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.gzeinnumer.retrofit.Api.ApiRequestBiodata;
 import com.gzeinnumer.retrofit.Api.RetroServer;
-import com.gzeinnumer.retrofit.Model.DataModel;
-import com.gzeinnumer.retrofit.Model.ResponModel;
+import com.gzeinnumer.retrofit.Model.ResponseReadData;
+import com.gzeinnumer.retrofit.Model.ResultReadDataItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +26,7 @@ public class TampilData extends AppCompatActivity {
 
     public AdapterData adapter;
     private RecyclerView.LayoutManager manager;
-    private List<DataModel> mItem = new ArrayList<>();
+    private List<ResultReadDataItem> mItem = new ArrayList<>();
     ProgressDialog pd;
 
     @Override
@@ -49,25 +47,24 @@ public class TampilData extends AppCompatActivity {
     }
 
     private void initData() {
-        ApiRequestBiodata api = RetroServer.getClient().create(ApiRequestBiodata.class);
-        Call<ResponModel> getData = api.getBiodata();
-        getData.enqueue(new Callback<ResponModel>(){
+        RetroServer.getInstance().getBiodata().enqueue(new Callback<ResponseReadData>() {
             @Override
-            public void onResponse(retrofit2.Call<ResponModel> call, Response<ResponModel> response) {
+            public void onResponse(Call<ResponseReadData> call, Response<ResponseReadData> response) {
                 pd.hide();
                 Log.d("RETRO","RESPONSE = "+response.body().getKode());
-                mItem=response.body().getResult();
+                mItem=response.body().getResultReadData();
                 adapter = new AdapterData(TampilData.this, mItem);
                 adapter.notifyDataSetChanged();
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
-            public void onFailure(retrofit2.Call<ResponModel> call, Throwable t) {
+            public void onFailure(Call<ResponseReadData> call, Throwable t) {
                 pd.hide();
                 Log.d("RETRO","FAILED = Respon Data Gagal");
             }
         });
+
     }
 
     @Override

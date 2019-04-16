@@ -23,8 +23,10 @@
         <TableRow>
             <TextView android:id="@+id/tampilId" android:layout_weight="1"/>
             <TextView android:id="@+id/tampilNama" android:layout_weight="1"/>
-            <TextView android:id="@+id/tampilUsia" android:layout_weight="1"/>
-            <TextView android:id="@+id/tampilDomisili" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilNim" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilJurusan" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilProdi" android:layout_weight="1"/>
+            <TextView android:id="@+id/tampilAlamat" android:layout_weight="1"/>
         </TableRow>
     </TableLayout>
 </LinearLayout>

@@ -1,6 +1,9 @@
 package com.gzeinnumer.retrofit.Api;
 
-import com.gzeinnumer.retrofit.Model.ResponModel;
+import com.gzeinnumer.retrofit.Model.ResponseDeleteData;
+import com.gzeinnumer.retrofit.Model.ResponseInsertData;
+import com.gzeinnumer.retrofit.Model.ResponseReadData;
+import com.gzeinnumer.retrofit.Model.ResponseUpdateData;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -11,20 +14,24 @@ import retrofit2.http.POST;
 public interface ApiRequestBiodata {
     @FormUrlEncoded
     @POST("insert.php")
-    Call<ResponModel> sendBiodata(@Field("nama") String nama,
-                                  @Field("usia") String usia,
-                                  @Field("domisili") String domisili);
+    Call<ResponseInsertData> sendBiodata(@Field("nama") String nama,
+                                         @Field("nim") String usia,
+                                         @Field("jurusan") String jurusan,
+                                         @Field("prodi") String prodi,
+                                         @Field("alamat") String alamat);
     @GET("read.php")
-    Call<ResponModel> getBiodata();
+    Call<ResponseReadData> getBiodata();
 
     @FormUrlEncoded
     @POST("delete.php")
-    Call<ResponModel> sentDeleteData(@Field("id") String id);
+    Call<ResponseDeleteData> sentDeleteData(@Field("id") String id);
 
     @FormUrlEncoded
     @POST("update.php")
-    Call<ResponModel> sentUpdateData(@Field("id") String id,
-                                     @Field("nama") String nama,
-                                     @Field("usia") String usia,
-                                     @Field("domisili") String domisili);
+    Call<ResponseUpdateData> sentUpdateData(@Field("id") String id,
+                                            @Field("nama") String nama,
+                                            @Field("nim") String usia,
+                                            @Field("jurusan") String jurusan,
+                                            @Field("prodi") String prodi,
+                                            @Field("alamat") String alamat);
 }
